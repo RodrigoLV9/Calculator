@@ -51,10 +51,11 @@ button{
     border-radius:15px;
     border:none;
     font-size: 1.3rem;
+    transition:filter .2s
     
 }
 .reset{
-    background-color: rgb(153, 47, 47);
+    background-color: rgb(168, 35, 35);
 }
 .button-number{
     background-color: rgb(164, 165, 120);
@@ -62,4 +63,15 @@ button{
 }
 .button-symbol{
     background-color: rgb(92, 134, 148);
+}
+
+/* Botones aparte */
+.equal, .delete{
+    background-color: rgb(92, 134, 148);
+}
+
+
+
+button:hover{
+    filter: opacity(.7);
 }

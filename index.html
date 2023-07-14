@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Vanilla</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="title">Calculadora</h1>
+    <h1 class="title">Calculadora con JS puro</h1>
     <div class="calculator">
-        <div class="calculator__display" id="display">g</div>
+        <div class="calculator__display" id="display"></div>
         <div class="calculator__buttons">
             <!-- Primer fila -->
             <button class="reset" id="reset">AC</button>
@@ -34,8 +34,8 @@
             <!-- Quinta Fila -->
             <button class="button-number">0</button>
             <button class="button-symbol">.</button>
-            <button class="button-symbol"><=</button>
-            <button class="button-symbol">=</button>
+            <button class="delete" id="delete"><=</button>
+            <button class="equal" id="equal">=</button>
         </div>
     </div>
     <script src="main.js"></script>
