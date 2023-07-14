@@ -14,9 +14,14 @@ numbers.forEach(element=>{
 symbol.forEach(element=>{
     element.addEventListener('click',(e)=>{
         let symbols=e.target.textContent
-        display.textContent=display.textContent+symbols
+        handleDisplay(display,symbols)
     })
 })
+function handleDisplay(display,symbols){
+    if(!(display.textContent.endsWith('/')||display.textContent.endsWith('%')||display.textContent.endsWith('x')||display.textContent.endsWith('-')||display.textContent.endsWith('+')||display.textContent.endsWith('.'))){
+        display.textContent=display.textContent+symbols
+    }
+}
 reset.addEventListener('click',(e)=>{
     display.textContent=null
 })
@@ -24,14 +29,9 @@ deleteValue.addEventListener('click',(e)=>{
     let newValue=display.textContent.slice(0,-1)
     display.textContent=newValue
 })
-
-
-
 equal.addEventListener('click',e=>{
-    const finalResult=handleErrors(display)
-    display.textContent=finalResult
+    display.textContent=handleErrors(display)
 })
-
 function handleErrors(display){
     let result=eval(handleMultiplication(display)).toFixed(2)
     if(isNaN(result)){
